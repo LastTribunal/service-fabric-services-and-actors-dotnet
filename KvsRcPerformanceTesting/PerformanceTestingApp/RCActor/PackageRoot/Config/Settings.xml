@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Section Name="RCActorServiceReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="RCActorServiceReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+    <Parameter Name="MaxPrimaryReplicationQueueSize" Value="131072" />
+    <Parameter Name="MaxSecondaryReplicationQueueSize" Value="262144" />
+    <!--<Parameter Name="CheckpointThresholdInMB" Value="100" />-->
+  </Section>
+  <Section Name="RCActorServiceReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+  <Section Name="RCActorServiceMigrationConfig">
+    <Parameter Name="SourceServiceUri" Value="fabric:/PerformanceTestingApp/KVSActorService" />
+    <Parameter Name="TargetServiceUri" Value="fabric:/PerformanceTestingApp/RCActorService" />
+    <Parameter Name="KeyValuePairsPerChunk" Value="1024" />
+    <Parameter Name="ChunksPerEnumeration" Value="16" />
+    <Parameter Name="CopyPhaseParallelism" Value="8" />
+    <Parameter Name="DowntimeThreshold" Value="1024" />
+  </Section>
+  <!-- The content will be generated during build -->
+</Settings>

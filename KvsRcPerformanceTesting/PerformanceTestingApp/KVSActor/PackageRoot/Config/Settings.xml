@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Section Name="KVSActorServiceReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="KVSActorServiceReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="KVSActorServiceReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+  <Section Name="KVSActorServiceMigrationConfig">
+    <Parameter Name="SourceServiceUri" Value="fabric:/PerformanceTestingApp/KVSActorService" />
+    <Parameter Name="TargetServiceUri" Value="fabric:/PerformanceTestingApp/RCActorService" />
+  </Section>
+  <Section Name="PerformanceTestingConfig">
+    <Parameter Name="BackupStorageAccountConnectionString" Value="AZURE_STORAGE_ACCOUNT_CONNECTION_STRING" />
+    <Parameter Name="BackupContainerName" Value="backupcontainer" />
+    <Parameter Name="KVSBackupZipFileName" Value="KVSActorBackup.zip" />
+  </Section>
+  <!-- The content will be generated during build -->
+</Settings>
